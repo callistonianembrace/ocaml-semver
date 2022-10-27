@@ -8,15 +8,9 @@ bug-reports: "https://github.com/rgrinberg/ocaml-semver/issues"
 dev-repo: "https://github.com/rgrinberg/ocaml-semver.git"
 
 build: [
-  ["ocaml" "setup.ml" "-configure"]
-  ["ocaml" "setup.ml" "-build"]
+  ["dune" "build" "-p" "semver"]
 ]
 
-install: ["ocaml" "setup.ml" "-install"]
-
-remove: [
-  ["ocamlfind" "remove" "semver"]
-]
 
 build-doc: ["ocaml" "setup.ml" "-doc"]
 
